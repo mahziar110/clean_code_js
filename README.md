@@ -5,7 +5,7 @@
 - [Introduction](#Introduction)
 - [Naming](#Naming)
 - [Functions](#Functions)
-- [Commenting]()
+- [Commenting](#Commenting)
 - [Formatting]()
 
 ## Introduction
@@ -179,7 +179,7 @@ Imagine if you run a restaurant and you keep track of your inventory: all your t
 [⬆️ Back To Top](#Clean-Code---Javascript)
 
 
-## Comments
+## Commenting
 ---
 Nothing can be quite so helpful as a well-placed comment. Nothing can be quite so damaging as an old crafty comment that propagates lies and misinformation.
 Comments are not like Schindler’s List. They are not “pure good.” Indeed, comments are, at best, a necessary evil.
