@@ -171,7 +171,7 @@ const addNumberToBlackList = (
 }
 ```
 
-### Remove duplicated codee
+### Remove Duplicated Code
 Do your absolute best to avoid duplicate code. Duplicate code is bad because it means that there's more than one place to alter something if you need to change some logic.
 
 Imagine if you run a restaurant and you keep track of your inventory: all your tomatoes, onions, garlic, spices, etc. If you have multiple lists that you keep this on, then all have to be updated when you serve a dish with tomatoes in them. If you only have one list, there's only one place to update!
@@ -185,3 +185,45 @@ Nothing can be quite so helpful as a well-placed comment. Nothing can be quite s
 Comments are not like Schindler’s List. They are not “pure good.” Indeed, comments are, at best, a necessary evil.
 
 The  proper  use  of  comments  is  to  compensate  for  our  failure  to  express  ourself  in code. Note that I used the word failure. I meant it. Comments are always failures. We must have  them  because  we  cannot  always  figure  out  how  to  express  ourselves  without  them, but their use is not a cause for celebration.
+
+### Just Use Comments When You Need
+When you find yourself in a position where you need to write a comment, think it through and  see  whether there isn’t some way to turn the tables and express yourself in code.
+
+### Explain Yourself in Code
+There are certainly times when code makes a poor vehicle for explanation. Unfortunately, many programmers have taken this to mean that code is seldom, if ever, a good means forexplanation. This is patently false. Which would you rather see? This:
+
+**Good ✔️**
+
+```javascript
+const addNumberToBlackList = (
+    blackList, phoneNumberDetails
+    ) => {
+    const { number, owner } = phoneNumberDetails;
+    return (...blackList, { number, owner });
+}
+```
+
+### Don't Comment Bad Code
+One of the more common motivations for writing comments is bad code. We write a mod-ule and we know it is confusing and disorganized. We know it’s a mess. So we say to our-selves, “Ooh, I’d better comment that!” No! You’d better clean it! 
+
+### TODO Comments
+It is sometimes reasonable to leave “To do” notes in the form of //TODO comments. In the following case, the TODO comment explains why the function has a degenerate implementation and what that function’s future should be.
+**TODOs are jobs that the programmer thinks should be done.**
+
+```javascript
+try {
+    const result = getSelectedThemeByUser(username);
+    if (result) {
+        const { 
+            primary_color, 
+            secondary_color,
+            icons_json 
+            } = result;
+        setPrimaryColor(primary_color);
+        setSecondaryColor(secondary_color);
+        setIconsList(icons_json);
+    }
+} catch {
+    // TODO: Set Default Values 
+}
+```
