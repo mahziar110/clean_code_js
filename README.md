@@ -6,7 +6,7 @@
 - [Naming](#Naming)
 - [Functions](#Functions)
 - [Commenting](#Commenting)
-- [Formatting]()
+- [Formatting](#Formatting)
 
 ## Introduction
 ---
@@ -277,6 +277,57 @@ Sometimes programmers like to mark a particular position in a source file. For e
 // Actions //////////////////////////////////
 ```
 There  are  rare  times  when  it  makes  sense  to  gather  certain  functions  together  beneath  abanner like this. But in general they are clutter that should be eliminated—especially thenoisy train of slashes at the end.
+
+[⬆️ Back To Top](#Clean-Code---Javascript)
+
+
+## Formatting
+---
+You should take care that your code is nicely formatted. You should choose a set ofsimple rules that govern the format of your code, and then you should consistently apply those rules. If you are working on a team, then the team should agree to a single set of formatting rules and all members should comply. It helps to have an automated tool that can apply those formatting rules for you.
+
+**Code  formatting  is  about  communication,  and communication is the professional developer’s first order of business.**
+
+
+### Use consistent capitalization
+so capitalization tells you a lot about your variables, functions, etc. These rules are subjective, so your team can choose whatever they want. The point is, no matter what you all choose, just be consistent.
+
+**Bad ❌**
+
+```javascript
+const DAYS_IN_WEEK = 7;
+const daysInMonth = 30;
+
+const songs = ["Back In Black", "Stairway to Heaven", "Hey Jude"];
+const Artists = ["ACDC", "Led Zeppelin", "The Beatles"];
+
+const eraseDatabase = () => {}
+const restore_database = () => {}
+
+class animal {}
+class Alpaca {}
+```
+
+**Good ✔️**
+```javascript
+const DAYS_IN_WEEK = 7;
+const DAYS_IN_MONTH = 30;
+
+const SONGS = ["Back In Black", "Stairway to Heaven", "Hey Jude"];
+const ARTISTS = ["ACDC", "Led Zeppelin", "The Beatles"];
+
+function eraseDatabase() {}
+function restoreDatabase() {}
+
+class Animal {}
+class Alpaca {}
+```
+
+#### Most Common Programming Case Types:
+* PascalCase 👨 :mostly used for React Components.
+* camelCase 🐫: mostly used for variables and functions names.
+* snake_case 🐍: mostly used for naming database fields.
+* kebab-case 🥙: mostly used for naming ids and classes in html elements.
+* UPPER_SNAKE_CASE ⬆️ 🐍: mostly used for naming config variables
 
 
 _**to be continued...**_
