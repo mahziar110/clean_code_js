@@ -228,6 +228,57 @@ try {
 }
 ```
 
+### Journal Comments
+Sometimes people add a comment to the start of a module every time they edit it. Thesecomments accumulate as a  kind  of  journal, or log, of every change that  has  ever  beenmade. I have seen some modules with dozens of pages of these run-on journal entries.
+```javascript
+/**
+ * Changes (from 11-Oct-2001) 
+ * -------------------------- 
+ * 11-Oct-2001 : Re-organised the class and moved it to new package  
+ * com.jrefinery.date (DG); 
+ * 05-Nov-2001 : Added a getDescription() method, and eliminated NotableDate  
+ * class (DG); 
+ * 12-Nov-2001 : IBD requires setDescription() method, now that NotableDate  
+ * class is gone (DG); Changed getPreviousDayOfWeek(),  
+ * getFollowingDayOfWeek() and getNearestDayOfWeek() to correct
+ * bugs (DG); 
+ * 05-Dec-2001 : Fixed bug in SpreadsheetDate class (DG); 
+ * 29-May-2002 : Moved the month constants into a separate interface  
+ * (MonthConstants) (DG); 
+ * 27-Aug-2002 : Fixed bug in addMonths() method, thanks to N???levka Petr (DG); 
+ * 03-Oct-2002 : Fixed errors reported by Checkstyle (DG); 
+ * 13-Mar-2003 : Implemented Serializable (DG); * 29-May-2003 : Fixed bug in addMonths method (DG); 
+ * 04-Sep-2003 : Implemented Comparable.  Updated the isInRange javadocs (DG); 
+ * 05-Jan-2005 : Fixed bug in addYears() method (1096282) (DG);
+*/
+```
+
+### Noise Comments
+Sometimes you see comments that are nothing  but  noise. They restate the obvious and provide no new information.
+
+```javascript
+// Hooks (React Component state)
+const [state, setState] = useState(null);
+```
+No, 😲 really? Oh how about this:
+```javascript
+class Greeting extends React.Component
+{
+    // Class Constructor
+    constructor (props) {
+        // ...
+    }
+}
+```
+
+### Position Markers
+Sometimes programmers like to mark a particular position in a source file. For example, Irecently found this in a program I was looking through:
+```javascript
+// Actions //////////////////////////////////
+```
+There  are  rare  times  when  it  makes  sense  to  gather  certain  functions  together  beneath  abanner like this. But in general they are clutter that should be eliminated—especially thenoisy train of slashes at the end.
+
+
 _**to be continued...**_
 
 
